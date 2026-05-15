@@ -60,7 +60,7 @@ curl -X POST http://localhost:3000/transaction \
 
 ## What's next
 
-- [ ] PostgreSQL persistence
+- [x] PostgreSQL persistence
 - [ ] Docker + docker-compose
 - [ ] Unit tests
 - [ ] Swagger docs
