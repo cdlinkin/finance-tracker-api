@@ -8,6 +8,7 @@ import (
 
 	"github.com/cdlinkin/finance-tracker-api/internal/config"
 	"github.com/cdlinkin/finance-tracker-api/internal/handler"
+	core_middleware "github.com/cdlinkin/finance-tracker-api/internal/middleware"
 	"github.com/cdlinkin/finance-tracker-api/internal/repository"
 	"github.com/cdlinkin/finance-tracker-api/internal/service"
 	"github.com/go-chi/chi/v5"
@@ -52,7 +53,7 @@ func main() {
 
 	chiRouter := chi.NewRouter()
 
-	chiRouter.Use(middleware.Logger)
+	chiRouter.Use(core_middleware.Logger)
 	chiRouter.Use(middleware.Recoverer)
 
 	chiRouter.Post("/transaction", h.Create)
