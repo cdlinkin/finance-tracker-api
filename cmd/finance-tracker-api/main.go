@@ -28,8 +28,10 @@ func main() {
 
 	cfg := config.ConfigLoad()
 
-	source := fmt.Sprintf("host=localhost port=5432 user=%s password=%s dbname=%s sslmode=disable",
-		cfg.User, cfg.Password, cfg.DBName)
+	source := fmt.Sprintf(
+		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
+		cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.DBName,
+	)
 
 	switch *storage {
 	case "postgres":

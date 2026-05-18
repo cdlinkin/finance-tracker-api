@@ -2,7 +2,7 @@
 
 A REST API for tracking income and expenses. Built with Go as a pet project to learn backend development and clean architecture.
 
-> Currently uses in-memory storage. PostgreSQL support is in progress.
+> Currently, both in-memory and PostgreSQL can be used.
 
 ## Why I built this
 
@@ -27,7 +27,9 @@ Each layer only knows about the one below it. The handler doesn't know where dat
 
 - Go 1.25.2
 - [chi](https://github.com/go-chi/chi) — router
-- in-memory storage (map) → PostgreSQL (in progress)
+- in-memory storage
+- PostgreSQL
+- Docker
 
 ## Run locally
 
@@ -61,6 +63,6 @@ curl -X POST http://localhost:3000/transaction \
 ## What's next
 
 - [x] PostgreSQL persistence
-- [ ] Docker + docker-compose
+- [x] Docker + docker-compose
 - [ ] Unit tests
 - [ ] Swagger docs
